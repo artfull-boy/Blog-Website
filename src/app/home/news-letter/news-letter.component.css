@@ -1,0 +1,112 @@
+.newsLetter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--24, 24px);
+  background: #D2E5FF;
+  height: 486px;
+  width: 100%;
+  gap: 30px;
+}
+.newsLetter > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+.newsLetter  .title {
+  color: #1A1A1A;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 62px; /* 119.231% */
+  letter-spacing: -0.939px;
+}
+
+.newsLetter  .subtitle {
+  color: rgba(0, 0, 0, 0.80);
+text-align: center;
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.361px;
+}
+.email {
+  display: flex;
+  gap: 20px;
+}
+.email input {
+  width: 351px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--Color-Grey-20, #D2D2D2);
+  padding: 0 10px;
+}
+.email input::placeholder {
+  color: var(--Color-Grey-60, #767676);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: -0.289px;
+}
+.email input:focus {
+  outline: none;
+}
+.email button {
+  width: 174px;
+height: 48px;
+flex-shrink: 0;
+background-color: #347BF1;
+color: white;
+border-radius: 6px;
+outline: 0;
+border: 0;
+}
+.newsLetter .warning {
+  color: #1A1A1A;
+text-align: center;
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
+letter-spacing: -0.289px;
+}
+footer {
+  margin: 60px auto;
+
+  color: #212529;
+text-align: center;
+font-family: Urbanist;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 160% */
+}
+@media (max-width:768px) {
+  .email {
+    flex-direction: column;
+    width: 100%;
+  }
+  .email input {
+    width: 100%;
+  }
+  .email button {
+    width: 100%;
+  }
+}
+@media (max-width:508px) {
+  .newsLetter  .title {
+    font-size: 40px;
+  }
+
+  .newsLetter  .subtitle {
+  font-size: 16px;
+  }
+}

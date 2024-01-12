@@ -2,7 +2,6 @@ p {
   margin: 0;
 }
 .hero {
-  margin: 120px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,9 +42,9 @@ line-height: 31.2px; /* 150% */
 }
 .hero .tags .tag {
   display: flex;
-  min-width: 120px;
+  min-width: 100px;
   width: fit-content;
-  height: 51px;
+  height: 45px;
   padding: 4px 10px;
   justify-content: center;
   align-items: center;
@@ -64,14 +63,14 @@ line-height: 31.2px; /* 150% */
 }
 .hero .tags .tag.selected p {
   color: var(--white-100, #FFF);
-  font-size: 26px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
 }
 .hero .tags .tag.notselected p {
   color: var(--white-100, #3B8CFF);
-  font-size: 26px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;

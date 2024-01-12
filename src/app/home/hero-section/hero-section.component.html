@@ -1,10 +1,13 @@
 <div class="hero container">
   <div class="big_title">
     <p>One Platform, Many Topics!</p>
-    <p>Gwala transforme la manière dont les entreprises gèrent leurs finances, leurs processus RH et la satisfaction des employés. </p>
+    <p>
+      Gwala transforme la manière dont les entreprises gèrent leurs finances,
+      leurs processus RH et la satisfaction des employés.
+    </p>
   </div>
   <div class="tags">
-    <div class="tag selected">
+    <!-- <div class="tag selected">
       <div class="number"><p>15</p></div>
       <p>All</p>
     </div>
@@ -33,7 +36,18 @@
     <div class="tag notselected">
       <div class="number"><p>1</p></div>
       <p>Wellness</p>
+    </div>-->
+    <div
+      class="tag"
+      *ngFor="let tag of tags; let i = index"
+      [class.selected]="isTagSelected(i)"
+      [class.notselected]="!isTagSelected(i) && selectedTags.size > 0"
+      (click)="selectTag(i)"
+    >
+      <div class="number">
+        <p>{{ tag.count }}</p>
+      </div>
+      <p>{{ tag.name }}</p>
     </div>
-
   </div>
 </div>
