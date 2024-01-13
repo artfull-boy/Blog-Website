@@ -106,3 +106,46 @@ ul li::before {
     text-decoration: none;
     cursor: pointer;
 }
+.content_details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.content_details .tags {
+    display: flex;
+    gap: 20px;
+}
+.content_details .tags .tag{
+    display: flex;
+    width: 153px;
+    height: 47px;
+    padding: 4px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #347BF1;
+    color: var(--White, var(--white-100, #FFF));
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 100% */
+}
+.content_details .likes{
+    display: flex;
+    gap: 20px;
+}
+.content_details .likes div{
+    cursor: pointer;
+}
+.content_details .likes .dislike svg {
+    transform: rotate(180deg);
+}
+.content_details .likes .dislike.clicked svg {
+    fill: #E12424;
+}
+.content_details .likes .like.clicked svg {
+    fill: #347BF1;
+}

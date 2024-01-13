@@ -16,4 +16,22 @@ export class BlogPageComponent {
   public onClick(elementId: string): void { 
       this.viewportScroller.scrollToAnchor(elementId);
   }
+  likeClicked = false;
+  dislikeClicked = false;
+
+  toggleLike() {
+      this.likeClicked = !this.likeClicked;
+      if (this.likeClicked && this.dislikeClicked) {
+          this.dislikeClicked = false;
+      }
+      // Additional operations (API call, etc.)
+  }
+
+  toggleDislike() {
+      this.dislikeClicked = !this.dislikeClicked;
+      if (this.dislikeClicked && this.likeClicked) {
+          this.likeClicked = false;
+      }
+      // Additional operations (API call, etc.)
+  }
 }
