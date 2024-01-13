@@ -1,10 +1,45 @@
+* {
+  font-family: 'Urbanist';
+}
 div#sidebar_left {
     background-color: #1C1C1C !important;
     height: 100vh;
     padding-top: 40px;
-    width: 100%;
+    width: 400px;
+    gap: 30px;
+    min-width: 400px;
+    align-items: center;
 }
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.profile p {
+  color: var(--black-100, #ffffff);
+font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
 
+/* 14 Semibold */
+font-family: 'Urbanist';
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+.profile img {
+  width: 60px;
+  height: 60px;
+}
+button.active {
+background-color: #E3F5FF !important;
+color: #1C1C1C !important;
+}
+.nav-item {
+  color: white !important;
+  width: 100%;
+}
 .sidebar{
   min-height: 100vh;
   width: 78px;
@@ -16,11 +51,17 @@ div#sidebar_left {
   top:0;
   left: 0;
 }
-
+.tab-content {
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+}
 .sidebar.open{
   width: 250px;
 }
-
+rect.highcharts-background {
+  fill: #F7F9FB !important;
+}
 .sidebar .logo_details{
   height: 60px;
   display: flex;
@@ -284,4 +325,71 @@ div#sidebar_left {
 .sidebar.open ~ .home-section{
   left:250px;
   width: calc(100% - 250px);
+}
+
+.statistics {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.statistics .views {
+  display: flex;
+min-width: 200px;
+padding: 30px;
+flex-direction: column;
+align-items: flex-start;
+gap: var(--8, 8px);
+flex: 1 0 0;
+border-radius: var(--16, 16px);
+background: var(--Primary-Blue, #E3F5FF);
+
+}
+.charts{
+
+  display: flex;
+  margin: 20px;
+
+}
+
+.pie{
+
+  flex: 1;
+  border-radius: var(--16, 16px);
+background: var(--Primary-Light, #F7F9FB);
+
+  margin-right: 20px;
+}
+
+.line{
+  flex: 1;
+  border-radius: var(--16, 16px);
+background: var(--Primary-Light, #F7F9FB);
+}
+.views .number {
+  color: var(--black-100, #1C1C1C);
+  font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+
+  /* 24 Semibold */
+  font-family: 'Urbanist';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 150% */
+}
+.views .title {
+  color: var(--black-100, #1C1C1C);
+font-family: 'Urbanist';
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+}
+.logout {
+  align-self: center;
+  width: 80%;
+
+}
+.logout button {
+  width: 100%;
 }
