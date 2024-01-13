@@ -156,3 +156,6 @@ line-height: 20px; /* 125% */
 .SecondRow .post .content .dashboard p{
   font-size: 14px;
 }
+a {
+  text-decoration: none;
+}
