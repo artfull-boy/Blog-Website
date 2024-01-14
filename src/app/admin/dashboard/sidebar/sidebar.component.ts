@@ -5,12 +5,12 @@ import { ChartModule } from 'angular-highcharts';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
 	selector: 'ngbd-nav-vertical',
 	standalone: true,
-	imports: [NgbNavModule, NgbNavModule,ChartModule,ReactiveFormsModule, CommonModule],
+	imports: [NgbNavModule, NgbNavModule,ChartModule,ReactiveFormsModule, CommonModule, RouterModule],
   styleUrl: './sidebar.component.css',
 	templateUrl: './sidebar.component.html',
 })
@@ -18,7 +18,7 @@ export class NgbdNavVertical {
 	active = 'top';
   title = 'angular-charts-youtube';
   blogForm: FormGroup;
-  submissionSuccess = true;
+  submissionSuccess = false;
   isModifying = false;
   ModificationSuccess = false;
   // ... existing code for your charts ...
