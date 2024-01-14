@@ -56,7 +56,7 @@ export class NgbdNavVertical {
   }
 
   submitModify() {
-    if (this.blogForm.valid) {
+    /*if (this.blogForm.valid) {
       this.blogService.updateBlog(this.blogForm.value).subscribe({
         next: () => {
           this.ModificationSuccess = true;
@@ -67,7 +67,7 @@ export class NgbdNavVertical {
           console.log(error)
         }
       });
-    }
+    }*/
   }
 
   submitBlog() {
