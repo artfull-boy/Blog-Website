@@ -9,6 +9,7 @@ div#sidebar_left {
     gap: 30px;
     min-width: 400px;
     align-items: center;
+    position: fixed;
 }
 .profile {
   display: flex;
@@ -55,6 +56,8 @@ color: #1C1C1C !important;
   width: 100%;
   padding: 30px;
   background-color: white;
+  margin-left: 400px !important;
+  position: relative;
 }
 .sidebar.open{
   width: 250px;
@@ -392,4 +395,137 @@ line-height: 20px; /* 142.857% */
 }
 .logout button {
   width: 100%;
+}
+.add_blog {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.title_tags {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.title_tags .title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.title_tags .tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+input:not([type="submit"]) {
+  background: var(--Primary-Light, #F7F9FB);
+  border: none;
+  width: 100%;
+  height: 70px;
+  border-radius: 16px;
+  padding: 20px;
+}
+.title_tags .title input, .title_tags .tags input {
+  width: 100%;
+}
+label {
+  color: #1C1C1C;
+font-family: 'Urbanist';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.notif {
+  position: absolute;
+  top: 20px;
+  width: calc(100% - 60px);
+}
+.blogs {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.blogs .blog {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: var(--12, 12px);
+border: 1px solid var(--Secondary-100, #E8E8EA);
+background: var(--white-100, #FFF);
+box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.15);
+width: 31%;
+}
+.blogs .blog img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+.blogs .blog .tag {
+
+  display: flex;
+width: 70px;
+height: 40px;
+padding: 18px 24px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+border-radius: 6px;
+background: rgba(75, 107, 251, 0.05);
+color: var(--Theme-1-Primary, #4B6BFB);
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 200% */
+}
+.blogs .blog .title {
+  color: var(--Secondary-800, #181A2A);
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px; /* 128.571% */
+}
+.blogs .blog .paragraph {
+  color: rgba(0, 0, 0, 0.50);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.5px; /* 143.75% */
+}
+.blogs .blog .buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.blogs .blog .buttons button {
+  width: 50%;
 }

@@ -40,30 +40,187 @@
 			</ng-template>
 		</ng-container>
 		<ng-container ngbNavItem="middle">
-			<button ngbNavLink>Middle</button>
+			<button ngbNavLink>Add Blog</button>
 			<ng-template ngbNavContent>
-				<p>
-					Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-					farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-					ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-					helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-					8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-					stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-				</p>
+				<form [formGroup]="blogForm" (ngSubmit)="submitBlog()" class="add_blog">
+          <div class="title_tags">
+            <div class="title">
+              <label for="title">Add Title</label>
+              <input type="text" formControlName="title" name="title" placeholder="Enter Title" required>
+            </div>
+            <div class="tags">
+              <label for="title">Add Tags Seperated by Comma</label>
+              <input type="text" formControlName="tags" name="title" placeholder="Enter Tags" required>
+            </div>
+          </div>
+          <div class="image">
+            <label for="image">Add Image</label>
+            <input (change)="onFileSelected($event)" formControlName="image" type="file" name="image" class="custom-file-input" required>
+          </div>
+          <div class="title1">
+            <label for="title1">Add Title of Paragraph 1</label>
+            <input type="text" formControlName="title1" name="title1" placeholder="Add Title of Paragraph 1" required>
+          </div>
+          <div class="paragraph1">
+            <label for="paragraph1">Add Paragraph 1</label>
+            <input type="text" formControlName="paragraph1" name="paragraph1" placeholder="Add Paragraph 1" required>
+          </div>
+          <div class="title2">
+            <label for="title2">Add Title of Paragraph 2</label>
+            <input type="text" formControlName="title2" name="title2" placeholder="Add Title of Paragraph 2" required>
+          </div>
+          <div class="paragraph2">
+            <label for="paragraph2">Add Paragraph 2</label>
+            <input type="text" formControlName="paragraph2" name="paragraph2" placeholder="Add Paragraph 2" required>
+          </div>
+          <div class="title3">
+            <label for="title3">Add Title of Paragraph 3</label>
+            <input type="text" formControlName="title3" name="title3" placeholder="Add Title of Paragraph 3" required>
+          </div>
+          <div class="paragraph3">
+            <label for="paragraph3">Add Paragraph 3</label>
+            <input type="text" formControlName="paragraph3" name="paragraph3" placeholder="Add Paragraph 3" required>
+          </div>
+          <input type="submit" value="Add Blog" class="btn btn-primary">
+        </form>
+        <div *ngIf="submissionSuccess" class="notif alert alert-success">
+          Blog submitted successfully!
+        </div>
 			</ng-template>
 		</ng-container>
 		<ng-container ngbNavItem="bottom">
-			<button ngbNavLink>Bottom</button>
+			<button ngbNavLink>Modify Blog</button>
 			<ng-template ngbNavContent>
-				<p>
-					Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla
-					facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu,
-					congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices
-					et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus
-					faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci
-					varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem
-					aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.
-				</p>
+				<div class="blogs_modify">
+          <div *ngIf="!isModifying" class="blogs">
+            <div class="blog">
+              <img src="../../../../assets/blogimage.png" alt="">
+              <div class="tag">
+                Wellness
+              </div>
+              <div class="title">
+                The Impact of Technology on the Workplace: How Technology is Changing
+              </div>
+              <div class="paragraph">
+                Last month, we launched a remarkable social media campaign called "HR Heroes", inviting employees to recognise and nominate HR Managers who demonstrate exceptional dedication and support in the workplace...
+              </div>
+              <div class="buttons">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Modify</button>
+              </div>
+            </div>
+            <div class="blog">
+              <img src="../../../../assets/blogimage.png" alt="">
+              <div class="tag">
+                Wellness
+              </div>
+              <div class="title">
+                The Impact of Technology on the Workplace: How Technology is Changing
+              </div>
+              <div class="paragraph">
+                Last month, we launched a remarkable social media campaign called "HR Heroes", inviting employees to recognise and nominate HR Managers who demonstrate exceptional dedication and support in the workplace...
+              </div>
+              <div class="buttons">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Modify</button>
+              </div>
+            </div>
+            <div class="blog">
+              <img src="../../../../assets/blogimage.png" alt="">
+              <div class="tag">
+                Wellness
+              </div>
+              <div class="title">
+                The Impact of Technology on the Workplace: How Technology is Changing
+              </div>
+              <div class="paragraph">
+                Last month, we launched a remarkable social media campaign called "HR Heroes", inviting employees to recognise and nominate HR Managers who demonstrate exceptional dedication and support in the workplace...
+              </div>
+              <div class="buttons">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Modify</button>
+              </div>
+            </div>
+            <div class="blog">
+              <img src="../../../../assets/blogimage.png" alt="">
+              <div class="tag">
+                Wellness
+              </div>
+              <div class="title">
+                The Impact of Technology on the Workplace: How Technology is Changing
+              </div>
+              <div class="paragraph">
+                Last month, we launched a remarkable social media campaign called "HR Heroes", inviting employees to recognise and nominate HR Managers who demonstrate exceptional dedication and support in the workplace...
+              </div>
+              <div class="buttons">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Modify</button>
+              </div>
+            </div>
+            <div class="blog">
+              <img src="../../../../assets/blogimage.png" alt="">
+              <div class="tag">
+                Wellness
+              </div>
+              <div class="title">
+                The Impact of Technology on the Workplace: How Technology is Changing
+              </div>
+              <div class="paragraph">
+                Last month, we launched a remarkable social media campaign called "HR Heroes", inviting employees to recognise and nominate HR Managers who demonstrate exceptional dedication and support in the workplace...
+              </div>
+              <div class="buttons">
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-primary">Modify</button>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="ModificationSuccess" class="notif alert alert-success">
+            Blog Modified successfully!
+          </div>
+          <form *ngIf="isModifying" [formGroup]="modifyForm" (ngSubmit)="submitModify()" class="add_blog">
+            <div class="title_tags">
+              <div class="title">
+                <label for="title">Add Title</label>
+                <input type="text" formControlName="title" name="title" placeholder="Enter Title" required>
+              </div>
+              <div class="tags">
+                <label for="title">Add Tags Seperated by Comma</label>
+                <input type="text" formControlName="tags" name="title" placeholder="Enter Tags" required>
+              </div>
+            </div>
+            <div class="image">
+              <label for="image">Add Image</label>
+              <input (change)="onFileSelected($event)" formControlName="image" type="file" name="image" class="custom-file-input" required>
+            </div>
+            <div class="title1">
+              <label for="title1">Add Title of Paragraph 1</label>
+              <input type="text" formControlName="title1" name="title1" placeholder="Add Title of Paragraph 1" required>
+            </div>
+            <div class="paragraph1">
+              <label for="paragraph1">Add Paragraph 1</label>
+              <input type="text" formControlName="paragraph1" name="paragraph1" placeholder="Add Paragraph 1" required>
+            </div>
+            <div class="title2">
+              <label for="title2">Add Title of Paragraph 2</label>
+              <input type="text" formControlName="title2" name="title2" placeholder="Add Title of Paragraph 2" required>
+            </div>
+            <div class="paragraph2">
+              <label for="paragraph2">Add Paragraph 2</label>
+              <input type="text" formControlName="paragraph2" name="paragraph2" placeholder="Add Paragraph 2" required>
+            </div>
+            <div class="title3">
+              <label for="title3">Add Title of Paragraph 3</label>
+              <input type="text" formControlName="title3" name="title3" placeholder="Add Title of Paragraph 3" required>
+            </div>
+            <div class="paragraph3">
+              <label for="paragraph3">Add Paragraph 3</label>
+              <input type="text" formControlName="paragraph3" name="paragraph3" placeholder="Add Paragraph 3" required>
+            </div>
+            <input type="submit" value="Modify Blog" class="btn btn-primary">
+
+          </form>
+
+        </div>
 			</ng-template>
 		</ng-container>
         <div class="logout">
